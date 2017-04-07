@@ -13,6 +13,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'slim'
 gem 'slim-rails'
+gem 'uglifier'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'turbolinks', '~> 5'
 
