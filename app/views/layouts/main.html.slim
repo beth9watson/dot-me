@@ -1,0 +1,13 @@
+html
+  head
+    title 
+      | Bethany Watson: Software Developer
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    = render 'layouts/navigation'
+    = content_for?(:content) ? yield(:content) : yield
+    = content_for?(:javascript) ? yield(:javascript) : yield
+  footer
+    = render 'layouts/footer'

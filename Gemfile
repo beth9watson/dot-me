@@ -9,8 +9,10 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'
 
-gem 'bootstrap'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'sass-rails'
 gem 'slim'
 gem 'slim-rails'
 gem 'uglifier'
