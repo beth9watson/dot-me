@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/', to: 'landing#show'
+  resource :contact, only: [:show], controller: 'contact'
+  resource :projects, only: [:show]
+  resource :resume, only: [:show], controller: 'resume'
 end

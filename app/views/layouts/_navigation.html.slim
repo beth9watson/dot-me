@@ -1,0 +1,30 @@
+nav.navbar.navbar-default role='navigation'
+  .container
+    .navbar-header
+      #navigation-collapse-button.button.navbar-toggle.collapsed data-target='#navigation' data-toggle='collapse' aria-expanded='false'
+        span.sr-only Toggle Navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href='/' Bethany Watson
+    #navigation.collapse.navbar-collapse 
+      ul.nav.navbar-nav.navbar-right
+        li.active
+          a.navbar-link href='/' Home
+        li
+          a.resume.navbar-link href=resume_path Resume
+        li
+          a.projects.navbar-link href=projects_path Projects
+        li
+          a.contact.navbar-link href=contact_path Contact
+- content_for :javascript do
+  javascript:
+    $(function() {
+      $('li.active').removeClass('active');
+      $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+      $('.nav-link').on('click', function(e) { 
+        var link = $(e.target);
+        $('li.active').removeClass('active');
+        link.addClass('active');
+      });
+    });
