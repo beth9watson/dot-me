@@ -14,13 +14,18 @@ body
   background-color: $background
 
 //http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
-/* navbar */
 .navbar-default 
   background-color: $background
   border: 0
-.navbar-default .navbar-brand 
-  color: $medium-dark-blue
 
+.navbar-default .navbar-brand
+  margin: 0
+  padding: 0
+
+.navbar-default .navbar-brand img
+  height: 100%
+  width: auto
+  
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus 
   color: $medium-dark-blue
