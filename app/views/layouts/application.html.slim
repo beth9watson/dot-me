@@ -5,9 +5,8 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  body.bg
+  body
     = render 'layouts/navigation'
-    = content_for?(:content) ? yield(:content) : yield
-    = content_for?(:javascript) ? yield(:javascript) : yield
+    = render 'layouts/content'
   footer
     = render 'layouts/footer'

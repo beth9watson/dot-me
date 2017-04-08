@@ -1,8 +1,13 @@
 hr
 ul.list-inline.text-center
-  li 
-    a.email href='#' Email
-  li 
-    a.github href='#' Github
-  li 
-    a.github href='#' LinkedIn
+  li
+    = link_to 'mailto:contact@bethanywatson.me' do
+      span.icon.glyphicon.glyphicon-envelope
+  li
+    = link_to 'https://github.com/beth9watson' do
+      span.icon 
+        = image_tag('github.png')
+  li
+    = link_to 'https://www.linkedin.com/in/beth-watson-985b58b4/' do
+      span.icon 
+        = image_tag('linkedin.png')
