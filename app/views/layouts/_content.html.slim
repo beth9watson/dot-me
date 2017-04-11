@@ -1,0 +1,5 @@
+container.content
+  .row
+    .col-sm-offset-2.col-sm-10
+      = content_for?(:content) ? yield(:content) : yield
+      = content_for?(:javascript) ? yield(:javascript) : yield

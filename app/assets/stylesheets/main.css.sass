@@ -1,21 +1,39 @@
 $lightest-blue: #eaf7ff
 $light-blue: #d8f0ff
 $medium-blue: #ccebff
-$medium-dark-blue: #023049
-$dark-blue: #011926
+$medium-dark-blue: #2F7599
+$dark-blue: #205068
 
-$light-gray: #59656b
-$medium-gray: #2c3235
+$light-gray: #f4fbff
+$medium-gray: #59656b
 $dark-gray: #202426
 
-$background: $lightest-blue
+$nav-background: $lightest-blue
+
 
 body 
-  background-color: $background
+  background-color: white
+h1
+  color: $dark-blue
+h2
+  color: $medium-dark-blue
+h3
+  color: $medium-blue
+
+ul
+  list-style: none
+  
+.content ul > li
+  margin-bottom: 5px
+
+.footer
+  background-color: $nav-background
+  height: 100%
+  padding: 2rem
 
 //http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
 .navbar-default 
-  background-color: $background
+  background-color: $nav-background
   border: 0
 
 .navbar-default .navbar-brand
@@ -42,7 +60,7 @@ body
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus 
   color: $medium-dark-blue
-  background-color: $background
+  background-color: $nav-background
   text-decoration: underline 
 
 .navbar-default .navbar-toggle 
@@ -55,6 +73,39 @@ body
 .navbar-default .navbar-toggle .icon-bar
   background-color: $medium-dark-blue
 
+@media(max-width:767px)
+  .navbar-default .navbar-collapse
+    border: 0
+  .navbar-default .navbar-nav
+    background-color: $medium-dark-blue
+  .navbar-default .navbar-nav > li > a 
+    color: $light-gray
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus 
+    color: $light-gray
+    text-decoration: underline
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus 
+    color: $light-gray
+    background-color: $medium-dark-blue
+    text-decoration: underline 
 
+//images
+$icon-height: 30px
 
+.glyphicon 
+  font-size: $icon-height
+  height: 100%
+  vertical-align: middle
+  color: $medium-gray
 
+.icon 
+  max-height: $icon-height
+  height: 100%
+  width: auto
+
+  margin-right: 5px
+.icon img
+  max-height: $icon-height
+  width: auto
