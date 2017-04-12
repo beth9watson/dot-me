@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resource :contact, only: [:show], controller: 'contact'
   resource :projects, only: [:show]
   resource :resume, only: [:show], controller: 'resume'
+
+  resource :scribbles, only: [:new]
 end
