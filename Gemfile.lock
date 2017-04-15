@@ -1,3 +1,9 @@
+PATH
+  remote: /Users/bethanywatson/web/scribble_store
+  specs:
+    scribble_store (0.1.0)
+      rails (~> 5.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -156,6 +162,7 @@ DEPENDENCIES
   pg (~> 0.18)
   rails (~> 5.0.2)
   sass-rails
+  scribble_store!
   slim
   slim-rails
   spring

@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412110915) do
+ActiveRecord::Schema.define(version: 20170415161308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "scribbles", force: :cascade do |t|
-    t.text     "before_image",    null: false
+  create_table "scribble_store_scribbles", force: :cascade do |t|
+    t.text     "before_image"
     t.text     "after_image"
-    t.string   "requester_email", null: false
+    t.string   "requester_email"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
