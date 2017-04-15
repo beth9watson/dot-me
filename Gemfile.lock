@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/bethanywatson/web/scribble_store
+GIT
+  remote: git@github.com:beth9watson/scribble-store-engine
+  revision: 429ff78455c1863900ab411f332ca2fc07951a6a
   specs:
     scribble_store (0.1.0)
       rails (~> 5.0.2)
