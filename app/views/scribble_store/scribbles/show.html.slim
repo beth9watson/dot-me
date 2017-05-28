@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-sm-8
+      .well
+        .feature-scribble
+          = image_tag @scribble.image.url
+    
+  - if @scribble.response_scribbles.any?
+    .row
+      .col-sm-8
+        hr
+        - @scribble.response_scribbles.each_with_index do |scb, i|
+          .col-sm-2
+            .thumbnail-scribble
+              = image_tag @scribble.image.url
