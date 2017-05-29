@@ -1,0 +1,21 @@
+.container
+  .row
+    .col-sm-8
+      h1 Can I scribble for you, too?
+      .col-sm-4
+      .col-sm-4
+  .row    
+    .col-sm-5
+      h2 How It Works
+      .well
+        p You scribble some nonesense on a white background and upload an image of your scribble to this site. I will then "complete" your scribble by using your original lines to create a new image, and send our collaborative art piece back to you!
+        h4 Here's what you need to do:
+        ol
+          li Scribble as much or as little as you like across a white surface (paper, digital canvas, Google Draw, etc).
+          li Produce an image of your scribble - photos or screenshots, whatever works for you.
+          li Upload the image by submitting the form on this page.
+          li Done! All that's left to do is wait for your finished artwork to be uploaded by me!
+    .col-sm-3
+      h2 Get Started!
+      .well
+        = render 'form', scribble: ScribbleStore::Scribble.new

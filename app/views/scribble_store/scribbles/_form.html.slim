@@ -1,0 +1,10 @@
+= form_for scribble do |f|
+  .form-group
+    = f.label :image, 'Scribble Image:'
+    = f.file_field :image
+  .form-group
+    = f.label :artist_email, 'Email Address: (optional)'
+    = f.text_field :artist_email, class: 'form-control'
+    small I will only use this to email you a link to your completed scribble.  
+
+  = f.submit 'Submit Scribble!', class: 'btn btn-submit'

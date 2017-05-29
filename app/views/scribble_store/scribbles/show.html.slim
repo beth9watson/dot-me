@@ -1,19 +1,22 @@
 .container
   .row
-    .col-sm-8
+    .col-sm-4
+      h2 Original Scribble
       .well
         .feature-scribble
-          = image_tag @scribble.image.url, id: 'featured-scribble-img'
-  - if @scribble.response_scribbles.any?
-    .row
-      .col-sm-8
-        hr
-        - @scribble.response_scribbles.each_with_index do |scb, i|
-          .col-sm-2
-            a.thumbnail-scribble
-              = image_tag scb.image.thumb.url, class: 'response-scribble-img', data: { feature_url: "#{scb.image.url}" }
-- content_for :javascript do
-  javascript:
-    $(function() {
-      initResponseScribblePreviews("#{@scribble.image.url}");
-    });
+          = image_tag @scribble.image.featured.url
+    .col-sm-4
+      h2 Completed Scribble
+      - if @scribble.response_scribbles.any?
+        .well
+          .feature-scribble
+            = image_tag @scribble.response_scribbles.first.image.featured.url
+      - else
+        .text-center
+          strong Stay tuned! 
+  .row
+    .col-sm-8
+      hr
+      h2 Scribbles are always free!
+      .well
+        | But you can still patronize the arts.
