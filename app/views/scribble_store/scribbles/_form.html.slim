@@ -1,6 +1,11 @@
 = form_for scribble do |f|
+  - if scribble.errors.any?
+    h4 Please fix the following #{pluralize('error', scribble.errors.count)} and try again:
+    ul
+      - scribble.errors.full_messages.each do |error|
+        li #{error}
   .form-group
-    = f.label :image, 'Scribble Image:'
+    = f.label :image, 'Upload Image:'
     = f.file_field :image
   .form-group
     = f.label :artist_email, 'Email Address: (optional)'
