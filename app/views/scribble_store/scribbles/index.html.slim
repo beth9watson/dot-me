@@ -2,11 +2,11 @@
   .row
     .col-sm-8
       h2.text-center Creating Collaborative Art With Scribbles
-      #scribble-carousel.carousel.slide.scribble-feature-container.well data-ride='carousel'
+      #scribble-carousel.carousel.slide.well data-ride='carousel'
         .carousel-inner role='listbox'
           - @scribbles.limit(5).each_with_index do |s, i|
-            div class="item #{'active' if i == 0}" style="margin: auto; padding: auto;"
-              img.d-block.img-fluid src="#{s.image.featured.url}"
+            a class="item #{'active' if i == 0}" href="#{scribble_url(s)}"
+              img.d-block.img-fluid.img-responsive.center-block src="#{s.image.featured.url}" 
   .row
     .col-sm-8
       .scribble-carousel-controls.text-center
@@ -16,6 +16,8 @@
           a.carousel-control-next href="#scribble-carousel" role="button" data-slide="next"
             .glyphicon.glyphicon-chevron-right.icon
             .sr-only Next
+      hr
+
   .row  
     .col-sm-5
       h2 How It Works

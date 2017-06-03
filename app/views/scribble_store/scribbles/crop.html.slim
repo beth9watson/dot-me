@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-sm-5
+      = image_tag @scribble.image.featured.url, id: 'cropbox'
+      = form_for @scribble do |f|
+        - %w(x y w h).each do |attr|
+          = f.hidden_field "crop_#{attr}"
+        = f.submit "Submit Scribble!", class: "btn btn-submit"
+    .col-sm-3
+      h4 Tips
+      .well
+        ul
+          li Crop it well
+          li Don't worry about the size
+          lie 8.5 x 11 sheet of paper
+- content_for :javascript do
+  javascript:
+    $(function () {
+      initScribbleCropper(3/2);
+    });

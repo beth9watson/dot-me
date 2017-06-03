@@ -2,15 +2,13 @@
   .row
     .col-sm-4
       h2 Original Scribble
-      .well
-        .feature-scribble
-          = image_tag @scribble.image.featured.url
+      .well.scribble-feature-container
+        img.img-responsive.center-block src="#{@scribble.image.featured.url}"
     .col-sm-4
       h2 Completed Scribble
       - if @scribble.response_scribbles.any?
-        .well
-          .feature-scribble
-            = image_tag @scribble.response_scribbles.first.image.featured.url
+        .well.scribble-feature-container
+          img.img-responsive.center-block src="#{@scribble.response_scribbles.first.image.featured.url}"
       - else
         .text-center
           strong Stay tuned! 
