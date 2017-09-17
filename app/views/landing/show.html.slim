@@ -4,23 +4,26 @@
     ul.list-inline
       li
         h3 
-          a href='#' Building Back-Ends
+          a href='#building' Building Back-Ends
       li
         h3 |
       li
         h3 
-          a href='#'Empowering Peers 
+          a href='#empowering' Empowering Peers 
       li
         h3 |
       li
         h3 
-          a href='#' Taking Action
+          a href='#actioning' Taking Action
 .landing-container.highlight-pallette
-  .row
-    .col-sm-6
-      .face-image.center-block
-        = image_tag('myFace.png', class: 'img-circle img-responsive')
-    .col-sm-6
-      h2 Hey there! I'm Beth.
-      p I'm a software developer based out of Ithaca, NY. Back-end work is my comfort zone and what I have the most fun doing, though I am also experienced in full-stack web development. In my free time I enjoy listening to french-language musicals on YouTube, doodling in black and white, binge-watching quirky sitcoms, and abusing splinter grenades in Halo 5 multiplayer.
+  = render 'bio'
+#building
+  .landing-container.medium-pallette
+    = render 'building'
+#empowering
+  .landing-container.accent-pallette
+    = render 'empowering'
+#actioning
+  .landing-container.highlight-pallette
+   = render 'actioning'
 
