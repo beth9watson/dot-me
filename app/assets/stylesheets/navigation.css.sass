@@ -6,6 +6,7 @@
 .navbar-default 
   background-color: $nav-background
   border: 0
+  font-family: $code
 
 .navbar-default .navbar-brand
   margin: 0
@@ -27,13 +28,15 @@
 .navbar-default .navbar-nav > li > a:focus 
   color: $highlight
   opacity: $op-emphasis
+  text-decoration: underline
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus 
   color: $highlight
   background-color: $nav-background
-  text-decoration: underline
+  text-decoration: none
+  text-weight: bold
 
 // begin collapsed navbar styles
 
