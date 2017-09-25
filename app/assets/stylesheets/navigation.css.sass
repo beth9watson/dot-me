@@ -1,0 +1,77 @@
+@import variables
+
+//http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
+
+// standard nav styles
+
+.navbar-default 
+  background-color: $nav-background
+  border: 0
+  font-family: $code
+
+// brand logo styles  
+
+.navbar-default .navbar-brand 
+  text-decoration: none
+  text-weight: bold
+  
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus 
+  color: $accent
+  opacity: $op-emphasis
+
+// links list styles
+
+.navbar-default .navbar-nav > li > a 
+  color: $highlight
+  opacity: $op-default
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus 
+  color: $highlight
+  opacity: $op-emphasis
+  text-decoration: underline
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus 
+  color: $highlight
+  background-color: $nav-background
+  text-decoration: none
+  text-weight: bold
+
+// begin collapsed navbar styles
+
+.navbar-default .navbar-toggle 
+  border-color: $medium
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus
+  background-color: $light
+
+.navbar-default .navbar-toggle .icon-bar
+  background-color: $medium
+
+@media(max-width:767px)
+  .navbar-default .navbar-collapse
+    border: 0
+  .navbar-default .navbar-nav
+    background-color: $medium
+    opacity: $op-default
+
+  .navbar-default .navbar-nav > li > a 
+    color: $highlight
+    opacity: $op-default
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus 
+    color: $highlight
+    opacity: $op-emphasis !important
+
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus 
+    color: $highlight
+    background-color: $accent
+    text-decoration: underline
+    opacity: $op-emphasis 

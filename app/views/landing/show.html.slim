@@ -1,2 +1,21 @@
-h1
-  | hi
+#intro.landing-container
+  .text-center
+    h1 Software Developer
+    ul.list-inline
+      li
+        h3 
+          a href='#building' Building Back-Ends
+      li
+        h3 |
+      li
+        h3 
+          a href='#empowering' Empowering Peers 
+.landing-container.highlight-pallette
+  = render 'bio'
+#building
+  .landing-container.accent-pallette
+    = render 'building'
+#empowering
+  .landing-container.highlight-pallette
+    = render 'empowering'
+

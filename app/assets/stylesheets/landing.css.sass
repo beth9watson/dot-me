@@ -1,0 +1,45 @@
+@import variables
+
+.landing-container
+  padding: 10em 2em
+
+  ul
+    list-style: circle
+
+  h1
+    font-size: 5vw
+  h2
+    font-size: 3vw
+    color: $accent
+  h3
+    font-size: 2vw
+  
+  @media screen and (max-width: 600px)
+    h1
+      font-size: 7vw
+
+    h3
+      font-size: 4vw
+      font-weight: bold
+
+//intro container styles
+
+#intro
+  color: $medium
+  font-family: $code
+
+  h1
+    color: $light
+    opacity: $op-subtle + .4
+  h3
+    color: $light
+
+  a
+    color: $light
+
+  a:hover
+    color: $accent
+    opacity: $op-emphasis
+.face-image
+  max-width: 250px
+  height: auto

@@ -1,88 +1,33 @@
 @import variables
-
-$nav-background: $lightest-blue
+@import navigation
+@import landing
+@import pallettes
 
 body 
-  background-color: white
-h1
-  color: $dark-blue
-h2
-  color: $medium-dark-blue
-h3
-  color: $medium-blue
+  background-color: $dark
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif
 
 ul
   list-style: none
+a
+  text-decoration: underline
 
 a:hover 
   cursor: pointer
+a:hover, a:focus
+  text-decoration: underline
   
+.btn
+  -webkit-transition-duration: 0.4s
+  transition-duration: 0.4s
+  border: $btn-borderpx solid transparent
+
 .content ul > li
   margin-bottom: 5px
 
 .footer
   background-color: $nav-background
-  padding: 2rem
-
-//http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
-.navbar-default 
-  background-color: $nav-background
-  border: 0
-
-.navbar-default .navbar-brand
-  margin: 0
-  padding: 0
-
-.navbar-default .navbar-brand img
-  height: 100%
-  width: auto
-  
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus 
-  color: $medium-dark-blue
-
-.navbar-default .navbar-nav > li > a 
-  color: $medium-dark-blue
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus 
-  color: $medium-dark-blue
-  text-decoration: underline
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus 
-  color: $medium-dark-blue
-  background-color: $nav-background
-  text-decoration: underline 
-
-.navbar-default .navbar-toggle 
-  border-color: $medium-dark-blue
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus
-  background-color: $light-blue
-
-.navbar-default .navbar-toggle .icon-bar
-  background-color: $medium-dark-blue
-
-@media(max-width:767px)
-  .navbar-default .navbar-collapse
-    border: 0
-  .navbar-default .navbar-nav
-    background-color: $medium-dark-blue
-  .navbar-default .navbar-nav > li > a 
-    color: $light-gray
-  .navbar-default .navbar-nav > li > a:hover,
-  .navbar-default .navbar-nav > li > a:focus 
-    color: $light-gray
-    text-decoration: underline
-  .navbar-default .navbar-nav > .active > a,
-  .navbar-default .navbar-nav > .active > a:hover,
-  .navbar-default .navbar-nav > .active > a:focus 
-    color: $light-gray
-    background-color: $medium-dark-blue
-    text-decoration: underline 
+  padding: 2em
 
 //images
 $icon-height: 30px
@@ -91,7 +36,7 @@ $icon-height: 30px
   font-size: $icon-height
   height: 100%
   vertical-align: middle
-  color: $medium-gray
+  color: $medium
 
 .icon 
   max-height: $icon-height
