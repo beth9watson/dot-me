@@ -1,0 +1,26 @@
+.row.margin-top
+  .col-sm-offset-1.col-sm-5
+    h2 Farkle Dice Game
+    p
+      strong Status: 
+      ' It's a mess, a work in progress!
+
+    p
+      | Here I'm recreating a dice game called
+      a< href="https://en.wikipedia.org/wiki/Farkle#Play" target="_blank" Farkle 
+      | . The GUI is generated using the Gosu game development library and some free-use graphics I've found online. 
+    p
+      | This project has been scrapped a couple of times, but each iteration it gets a little better. 
+  .col-sm-4
+    h3 Tech Focus
+    ul
+      li Ruby
+      li 
+        a href="https://www.libgosu.org/index.html" target="_blank" Gosu (ruby game dev library)
+    .figure.margin-top
+      = image_tag('farkle1.png', class: 'img-responsive figure-img')
+      figcaption.figure-caption
+        small This is actually a non-scoring roll for most variations of "Farkle".
+.text-center.margin-top
+  .btn
+    a href="https://github.com/beth9watson/dice-game" target="_blank" View the Repo

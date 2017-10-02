@@ -1,0 +1,41 @@
+.row
+  .col-sm-offset-1.col-sm-6
+    h2 www.bethanywatson.me
+    p
+      strong Status: 
+      ' You're looking at it!
+    p
+      | Because I already had so much experience working with Ruby on Rails apps, developing this site using Rails allowed me to focus on two of my weaker skill sets: design and writing CSS. It also means I can use this site as an easy launch point for my other RoR projects.
+    p
+      | I've learned a lot though experimentation -- particularly about opacity and style inheritance. The CSS probably smells a bit like a back-end developer wrote it, though. Just checkout my 
+      a> href="https://raw.githubusercontent.com/beth9watson/dot-me/master/app/assets/stylesheets/variables.css.sass" target="_blank" variables.sass file 
+      ' on GitHub. I do love me some variables...
+  .col-sm-4
+    .figure.margin-top
+      = image_tag('oldStyle.png', class: 'img-responsive figure-img')
+      figcaption.figure-caption
+        small A pre-learnification version of www.bethanywatson.me
+
+.text-center.margin-top
+  .btn 
+    a href="https://github.com/beth9watson/dot-me" target="_blank" View the Repo
+.row.margin-top
+  .col-sm-offset-1.col-sm-5
+    h2 The Scribble Store
+    p
+      strong Status: 
+      ' Very much a work in progress!
+    p
+      | The Scribble Store is an image gallery application, but the spirit behind it is more like a community art project; people upload some scribbles, then I draw on top of their scribbles and re-upload the image. I have no intentions of turning this into a real business, but I would be tickled to scribble for real people if it ever gets to that point.
+  .col-sm-4
+    h3 Tech Focus
+    ul
+      li Rails Engines
+      li AWS Image Hosting
+    p
+      | The Rails Engine setup allows me to easily host the app on this website while keeping the code isolated in its own repository.
+.text-center.margin-top
+  .btn.margin-right
+    a href="/the-scribble-store" target="_blank" The Scribble Store
+  .btn
+    a href="https://github.com/beth9watson/scribble-store-engine" target="_blank" View the Repo
