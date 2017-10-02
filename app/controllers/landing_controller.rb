@@ -1,5 +1,5 @@
 class LandingController < ApplicationController
   def show
-    render 'show', layout: 'landing'
+    render 'show'
   end
 end
