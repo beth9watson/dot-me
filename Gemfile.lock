@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bethanyvwatson/scribble-store-engine.git
-  revision: 86bc2e41b21d1cadbc64a04775a66022940f1e2f
+  revision: ddaa29fba311552c4b169af7aadacd6bcda70d40
   specs:
     scribble_store (0.1.0)
       carrierwave (~> 0.10.0)
