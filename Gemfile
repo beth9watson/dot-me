@@ -7,7 +7,10 @@ end
 
 # include scribble store from repo
 gem 'scribble_store', git: 'https://github.com/bethanyvwatson/scribble-store-engine.git' 
+
+#todo remove?
 gem 'carrierwave'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'
@@ -21,6 +24,8 @@ gem 'slim-rails'
 gem 'uglifier'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'turbolinks', '~> 5'
+
+gem "octokit", "~> 4.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
