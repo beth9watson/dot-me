@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:bethanyvwatson/scribble-store-engine
+  remote: https://github.com/bethanyvwatson/scribble-store-engine.git
   revision: 762f3300ddc30b0762255e3ed1c24a583a71355a
   specs:
     scribble_store (0.1.0)

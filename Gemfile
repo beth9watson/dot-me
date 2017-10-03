@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # include scribble store from repo
-gem 'scribble_store', git: 'git@github.com:bethanyvwatson/scribble-store-engine' 
+gem 'scribble_store', git: 'https://github.com/bethanyvwatson/scribble-store-engine.git' 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
