@@ -6,7 +6,7 @@
   .row
     = render "#{index.odd? ? 'description' : 'stats'}", project: project
     = render "#{index.even? ? 'description' : 'stats'}", project: project
-  - if project.read_more.present?
+  - if project.try(:read_more).present?
     .row
       .col-sm-offset-1.col-sm-10
         .long-description

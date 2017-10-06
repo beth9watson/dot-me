@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def projects
     gh_client = GithubClientService.new
-    p = ENV['GITHUB_FEATURED_REPOS'].split(",").sort.map do |repo_name|
+    ENV['GITHUB_FEATURED_REPOS'].split(",").sort.map do |repo_name|
       gh_client.get_repo(repo_name)
     end
   end
