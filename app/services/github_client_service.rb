@@ -23,7 +23,7 @@ class GithubClientService
   end 
 
   def get_long_description(repo_name)
-    @client.contents(repo_name, path: 'dot_me_descr.txt').content.unpack('m*')[0]
+    @client.contents(repo_name, path: ENV['GITHUB_PROJECT_DESCRIPTION_PATH']).content.unpack('m*')[0]
   rescue Octokit::NotFound
     return
   end
