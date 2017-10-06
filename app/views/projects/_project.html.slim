@@ -3,7 +3,7 @@
     .col-sm-offset-1
       h1
         a href="#{project.url}" target="_blank" #{project.name}
-      - if project.try(:read_more).present?
+      - if project.try(:long_description).present?
         h3 #{project.description}
   .row
     = render 'stats', project: project

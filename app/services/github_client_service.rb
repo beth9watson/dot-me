@@ -6,7 +6,7 @@ class GithubClientService
 
   def get_repo(repo_name)
     r = @client.repo(ENV['GITHUB_USERNAME'] + "/#{repo_name}")
-    r.read_more = get_long_description(r.full_name)
+    r.long_description = get_long_description(r.full_name)
     r.language_percentages = get_language_percentages(r.full_name)
     r
   end

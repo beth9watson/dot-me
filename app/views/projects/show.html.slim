@@ -1,6 +1,6 @@
 #intro.landing-container
   .text-center
-    h1 Personal Projects
+    h1 Featured Projects
 - @projects.each.with_index do |proj, i|
   = render 'project', project: proj, index: i
 - content_for :javascript do
@@ -22,7 +22,7 @@
         var target = $(e.currentTarget);
         
         target.closest('.long-description').find('.trunc-description-content').removeClass('hidden');
-        target.closest('.trunc-description').find('.read-more').removeClass('hidden');
+        target.closest('.long-description').find('.read-more').removeClass('hidden');
         
         target.closest('.long-description').find('.long-description-content').addClass('hidden');
         target.addClass('hidden');

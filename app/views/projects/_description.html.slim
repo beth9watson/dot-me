@@ -1,12 +1,12 @@
 .col-sm-offset-1.col-sm-5
-  - if project.try(:read_more).present?
+  - if project.try(:long_description).present?
     .long-description
       .trunc-description-content
         p 
-          = simple_format(truncate(project.read_more, length: 150))
+          = simple_format(truncate(project.long_description, length: 150))
       .long-description-content.hidden
         p
-          = simple_format(project.read_more)
+          = simple_format(project.long_description)
       .text-center
         a.read-more Read More
         a.read-less.hidden Read Less
