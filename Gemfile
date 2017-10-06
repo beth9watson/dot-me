@@ -26,6 +26,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'turbolinks', '~> 5'
 
 gem "octokit", "~> 4.0"
+gem "faraday-http-cache"
 
 group :development, :test do
   gem 'byebug', platform: :mri
