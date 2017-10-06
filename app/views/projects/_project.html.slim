@@ -1,18 +1,10 @@
 .landing-section class="#{index.odd? ? 'accent' : 'basic'}-pallette"
   .row
     .col-sm-offset-1
-      h2
+      h1
         a href="#{project.url}" target="_blank" #{project.name}
+      - if project.try(:read_more).present?
+        h3 #{project.description}
   .row
-    = render "#{index.odd? ? 'description' : 'stats'}", project: project
-    = render "#{index.even? ? 'description' : 'stats'}", project: project
-  - if project.try(:read_more).present?
-    .row
-      .col-sm-offset-1.col-sm-10
-        .long-description
-          .description-content.hidden
-            p
-              = simple_format(project.read_more)
-          .text-center
-            a.read-more Read More
-            a.read-less.hidden Read Less
+    = render 'stats', project: project
+    = render 'description', project: project

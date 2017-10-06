@@ -1,6 +1,4 @@
-# require 'octokit'
 class GithubClientService
-  # Repo = Struct.new(:url, :name, :description, :pushed_at, :language, :read_more) do end
 
   def initialize
     @client = ::Octokit::Client.new(access_token: ENV['GITHUB_DOTME_ACCESS_TOKEN'])
@@ -11,8 +9,6 @@ class GithubClientService
     r.read_more = get_long_description(r.full_name)
     r.language_percentages = get_language_percentages(r.full_name)
     r
-    # descr = "Squashy armchairs dirt on your nose brass scales crush the"
-    # Repo.new('www.google.com', 'awesome project', descr, Time.now, 'Ruby', 'holy poop')
   end
 
   private
@@ -30,6 +26,5 @@ class GithubClientService
     @client.contents(repo_name, path: 'dot_me_descr.txt').content.unpack('m*')[0]
   rescue Octokit::NotFound
     return
-
   end
 end
