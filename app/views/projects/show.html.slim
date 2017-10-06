@@ -1,23 +1,5 @@
 #intro.landing-container
   .text-center
     h1 Personal Projects
-    ul.list-inline
-      li
-        h3 
-          a href='#web' Full-Stack Web
-      li
-        h3 |
-      li
-        h3
-          a href='#ruby' Ruby
-      li
-        h3 |
-      li
-        h3
-          a href='#other' Other
-#web.landing-container.basic-pallette
-  = render 'web'
-#ruby.landing-container.accent-pallette
-  = render 'ruby'
-#other.landing-container.basic-pallette
-  = render 'other'
+- @projects.each.with_index do |proj, i|
+  = render 'project', project: proj, index: i

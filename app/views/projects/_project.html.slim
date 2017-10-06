@@ -1,0 +1,9 @@
+.landing-section class="#{index.odd? ? 'accent' : 'basic'}-pallette"
+  .row
+    .col-sm-offset-1
+      h2
+        a href="#{project.link}" target="_blank" #{project.name}
+  .row
+    = render "#{index.odd? ? 'description' : 'stats'}", project: project
+    = render "#{index.even? ? 'description' : 'stats'}", project: project
+  
