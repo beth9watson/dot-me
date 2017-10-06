@@ -1,0 +1,10 @@
+.landing-section class="#{index.odd? ? 'accent' : 'basic'}-pallette"
+  .row
+    .col-sm-offset-1
+      h1
+        a href="#{project.url}" target="_blank" #{project.name}
+      - if project.try(:long_description).present?
+        h3 #{project.description}
+  .row
+    = render 'stats', project: project
+    = render 'description', project: project

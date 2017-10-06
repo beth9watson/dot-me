@@ -1,0 +1,8 @@
+.col-sm-offset-1.col-sm-4
+  strong> Last Activity:
+  = project.pushed_at.strftime("%m/%d/%Y")
+  p
+  strong Languages:
+  ul.list-inline
+    - project.language_percentages.each do |lang, pct|
+      li #{lang}: #{pct}%
