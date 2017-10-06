@@ -3,3 +3,22 @@
     h1 Personal Projects
 - @projects.each.with_index do |proj, i|
   = render 'project', project: proj, index: i
+- content_for :javascript do
+  javascript:
+    $(function() {
+      $('.read-more').on('click', function(e) {
+        e.preventDefault();
+        var target = $(e.currentTarget);
+        target.closest('.long-description').find('.description-content').removeClass('hidden');
+        target.closest('.long-description').find('.read-less').removeClass('hidden')
+        target.addClass('hidden');
+      });
+
+      $('.read-less').on('click', function(e) {
+        e.preventDefault();
+        var target = $(e.currentTarget);
+        target.closest('.long-description').find('.description-content').addClass('hidden');
+        target.closest('.long-description').find('.read-more').removeClass('hidden')
+        target.addClass('hidden');
+      });
+    });

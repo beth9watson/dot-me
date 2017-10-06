@@ -2,8 +2,17 @@
   .row
     .col-sm-offset-1
       h2
-        a href="#{project.link}" target="_blank" #{project.name}
+        a href="#{project.url}" target="_blank" #{project.name}
   .row
     = render "#{index.odd? ? 'description' : 'stats'}", project: project
     = render "#{index.even? ? 'description' : 'stats'}", project: project
-  
+  - if project.read_more.present?
+    .row
+      .col-sm-offset-1.col-sm-10
+        .long-description
+          .description-content.hidden
+            p
+              = simple_format(project.read_more)
+          .text-center
+            a.read-more Read More
+            a.read-less.hidden Read Less

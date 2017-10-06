@@ -1,14 +1,22 @@
 # require 'octokit'
 class GithubClientService
-  # Repo = Struct.new(:link, :name, :description, :pushed_at, :language) do end
+  # Repo = Struct.new(:url, :name, :description, :pushed_at, :language, :read_more) do end
 
   def initialize
-    # @client = ::Octokit::Client.new(access_token: ENV['GITHUB_DOTME_ACCESS_TOKEN'])
+    @client = ::Octokit::Client.new(access_token: ENV['GITHUB_DOTME_ACCESS_TOKEN'])
   end
 
   def get_repo(repo_name)
-    # @client.repo(ENV['GITHUB_USERNAME'] + "/#{repo_name}")
-    descr = "Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. Witch Weekly, he will rise ag"
-    Repo.new('www.google.com', 'awesome project', descr, Time.now, 'Ruby')
+    r = @client.repo(ENV['GITHUB_USERNAME'] + "/#{repo_name}")
+    r.read_more = get_long_description(r.full_name)
+    r
+    # descr = "Squashy armchairs dirt on your nose brass scales crush the"
+    # Repo.new('www.google.com', 'awesome project', descr, Time.now, 'Ruby', 'holy poop')
+  end
+
+  private
+
+  def get_long_description(repo_name)
+    @client.contents(repo_name, path: 'dot_me_descr.txt').content.unpack('m*')[0]
   end
 end

@@ -1,6 +1,8 @@
 .col-sm-offset-1.col-sm-4
-  small
-    strong Language:
-    ' #{project.language}
-    strong Recent Activity: 
-    ' #{project.pushed_at}
+  ul
+    li
+      strong> Language:
+      ' #{project.language}
+    li
+      strong> Last Activity:
+      = project.pushed_at.strftime("%m/%d/%Y")
