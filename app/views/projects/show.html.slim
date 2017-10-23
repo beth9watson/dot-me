@@ -1,8 +1,9 @@
 #intro.landing-container
   .text-center
     h1 Featured Projects
-- @projects.each.with_index do |proj, i|
-  = render 'project', project: proj, index: i
+- @projects.each.with_index do |proj, index|
+  .landing-container class="#{index.odd? ? 'accent' : 'basic'}-pallette"
+    = offset_render 'project', project: proj
 - content_for :javascript do
   javascript:
     $(function() {

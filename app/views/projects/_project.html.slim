@@ -1,14 +1,11 @@
-.landing-section class="#{index.odd? ? 'accent' : 'basic'}-pallette"
-  .row
-    .col-sm-offset-1
-      h1 #{project.description}
-  .row
-    = render 'stats', project: project
-    = render 'description', project: project
-  .row
-    .text-center
-      .btn.btn-small 
-        a href="#{project.html_url}" target="_blank" View Repo
-      - if project.homepage.present?
-        .btn.btn-small.margin-left 
-          a href="#{project.homepage}" target="_blank" View Demo
+h2 #{project.description}
+.row
+  = render 'stats', project: project
+  = render 'description', project: project
+.row
+  .text-center
+    .btn.btn-small 
+      a href="#{project.html_url}" target="_blank" View Repo
+    - if project.homepage.present?
+      .btn.btn-small.margin-left 
+        a href="#{project.homepage}" target="_blank" View Demo

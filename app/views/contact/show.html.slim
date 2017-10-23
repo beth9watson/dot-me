@@ -17,25 +17,4 @@
           a href=linkedin_url target='_blank' On LinkedIn
 
 .landing-container.basic-pallette
-  .row
-    .col-sm-offset-1.col-sm-3
-      .face-image.center-block
-        = image_tag('myFace.png', class: 'img-circle img-responsive')
-    h2 I'd love to hear from you.
-    .col-sm-4
-      p
-        | Wondering if we would work well together? There's only one way to find out! Reach out through any of the links provided, or email me at 
-        a<> href='mailto:contact@bethanywatson.me'
-          | contact@bethanywatson.me
-        | to begin developing our relationship.
-      p
-        | Have a question, or some advice to offer? Just want to say "hello world"? That's cool. Hit me up!
-    .col-sm-4
-      ul
-        li
-          a href=gmail_addr #{gmail_addr(false)}
-        li
-          a href=github_url target='_blank' bethanyvwatson on GitHub
-        li
-          a href=linkedin_url target='_blank' Bethany Watson on LinkedIn
-
+  = offset_render 'contact/info'
