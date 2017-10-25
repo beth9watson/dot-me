@@ -1,6 +1,7 @@
 .row
   .col-sm-6
-    h2 On the Clock
+    .text-center
+      h2 On the Clock
     hr
     p I have 4 years of professional experience developing software for <a href="https://www.givegab.com/" target="_blank">www.givegab.com</a> - GiveGab, the Nonprofit Giving Platform.
     p
@@ -14,12 +15,13 @@
          | SQL
 
   .col-sm-6
-    h2 On the Couch
+    .text-center
+      h2 On the Couch
     hr
     p 
       | Sometimes I code for fun, too!
     p
-      | My personal projects mostly use Ruby and Ruby on Rails. These include a couple websites, some small games, and a blog.
+      | My personal projects include a couple websites, some small Ruby games, and a personal blog.
     p
       | The blog contains posts about my project progress and the little things that I learn along the way.
 .row
@@ -32,5 +34,5 @@
       button.btn
         a href='/projects' View Projects
       button.btn
-        a href='/blog' View Blog
+        a href="#{ENV['BLOG_URL']}" View Blog
 
