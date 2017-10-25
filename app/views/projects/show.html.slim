@@ -1,6 +1,15 @@
 #intro.landing-container
   .text-center
     h1 Featured Projects
+    ul.list-inline
+      li
+        h3 
+          a href="#{ENV['GITHUB_URL']}" target='_blank' GitHub Profile
+      li
+        h3 |
+      li
+        h3 
+          a href="#{ENV['BLOG_URL']}" target='_blank' Development Blog
 - @projects.each.with_index do |proj, index|
   .landing-container class="#{index.odd? ? 'accent' : 'basic'}-pallette"
     = offset_render 'project', project: proj
