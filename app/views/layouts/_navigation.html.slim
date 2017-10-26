@@ -14,9 +14,9 @@ nav.navbar.navbar-default.navbar-fixed-top role='navigation'
         li
           a.projects.navbar-link href=main_app.projects_path Projects
         li
-          a.navbar-link href="#{ENV['BLOG_URL']}" Blog
-        li
           a.contact.navbar-link href=main_app.contact_path Contact
+        li
+          a.navbar-link href="#{ENV['BLOG_URL']}" target='_blank' Blog
 - content_for :javascript do
   javascript:
     $(function() {
