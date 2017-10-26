@@ -10,4 +10,8 @@ module ContactHelper
   def linkedin_url
     ENV['LINKEDIN_URL']
   end
+
+  def download_resume_pdf_link
+    "<a href='images/ResumePDF2017copy.pdf' download> Download PDF </a>".html_safe
+  end
 end
