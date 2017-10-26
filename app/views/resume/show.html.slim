@@ -1,1 +1,20 @@
-h1 Resume
+#intro.landing-container
+  .text-center
+    h1 Resumè
+    ul.list-inline
+      li
+        h3 
+          a href='images/ResumePDF2017.pdf' Download PDF
+      li
+        h3 |
+      li
+        h3 
+          a href='images/ResumePDF2017.txt' Download TXT
+.landing-container.highlight-pallette
+  .resume-apology
+      = offset_render 'resume/small_screen_apology'
+  .resume-container
+    .text-center
+      object.resume-viewer type="application/pdf" data="images/ResumePDF2017copy.pdf"
+        p There was an issue rendering this resume as a PDF. You can try downloading it instead!
+        = render 'download_buttons'
