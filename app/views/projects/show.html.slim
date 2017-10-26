@@ -11,7 +11,7 @@
         h3 
           a href="#{ENV['BLOG_URL']}" target='_blank' Development Blog
 - @projects.each.with_index do |proj, index|
-  .landing-container class="#{index.odd? ? 'accent' : 'basic'}-pallette"
+  .landing-container class="#{index.odd? ? 'medium' : 'basic'}-pallette"
     = offset_render 'project', project: proj
 - content_for :javascript do
   javascript:

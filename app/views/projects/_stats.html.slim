@@ -1,9 +1,19 @@
-.col-sm-offset-1.col-sm-4
-  ul.list-inline
-    - project.language_percentages.each do |lang, pct|
-      li 
-        strong> #{lang}: 
-        | #{pct}%
-  p
-  strong> Last Activity:
-  = project.pushed_at.strftime("%m/%d/%Y")
+.row
+  .col-sm-offset-1.col-sm-5
+    strong> Last Activity:
+    = project.pushed_at.strftime("%m/%d/%Y")
+    p
+    ul.list-inline
+      - project.language_percentages.each do |lang, pct|
+        li 
+          strong> #{lang}: 
+          | #{pct}%
+
+  .col-sm-6
+    .text-center
+      .btn.btn-small 
+        a href="#{project.html_url}" target="_blank" Git Repo
+      - if project.homepage.present?
+        .btn.btn-small
+          a href="#{project.homepage}" target="_blank" Try It Out
+    

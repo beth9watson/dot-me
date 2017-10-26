@@ -1,15 +1,14 @@
-- max_length = 150
-.col-sm-offset-1.col-sm-5
-  - if project.try(:long_description).present?
-    .long-description
-      .trunc-description-content
-        p 
-          = simple_format(truncate(project.long_description, length: max_length))
-      .long-description-content.hidden
-        p
-          = simple_format(project.long_description)
-      - if project.long_description.length > max_length
-        .text-center
-          a.read-more Read More
-          a.read-less.hidden Read Less
- 
+- max_length = 300
+
+- if project.try(:long_description).present?
+  .long-description
+    .trunc-description-content
+      p 
+        = simple_format(truncate(project.long_description, length: max_length))
+    .long-description-content.hidden
+      p
+        = simple_format(project.long_description)
+    - if project.long_description.length > max_length
+      .text-center
+        a.read-more Read More
+        a.read-less.hidden Read Less

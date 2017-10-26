@@ -1,11 +1,3 @@
 h2 #{project.description}
-.row
-  = render 'stats', project: project
-  = render 'description', project: project
-.row
-  .text-center
-    .btn.btn-small 
-      a href="#{project.html_url}" target="_blank" Git Repo
-    - if project.homepage.present?
-      .btn.btn-small
-        a href="#{project.homepage}" target="_blank" Try It Out
+= render 'stats', project: project
+= render 'description', project: project
