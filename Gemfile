@@ -17,6 +17,7 @@ gem 'pg', '~> 0.18'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
+gem 'newrelic_rpm'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'slim'
