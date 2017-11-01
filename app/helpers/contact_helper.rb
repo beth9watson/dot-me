@@ -1,4 +1,8 @@
 module ContactHelper
+  def download_resume_pdf_link
+    "<a href=#{resume_url} download> Download PDF </a>".html_safe
+  end
+
   def github_url
     ENV['GITHUB_URL']
   end
@@ -11,7 +15,7 @@ module ContactHelper
     ENV['LINKEDIN_URL']
   end
 
-  def download_resume_pdf_link
-    "<a href='images/ResumePDF2017copy.pdf' download> Download PDF </a>".html_safe
+  def resume_url
+    'images/watsonResume2017.pdf'
   end
 end

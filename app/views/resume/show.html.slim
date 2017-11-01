@@ -1,6 +1,6 @@
 #intro.landing-container
   .text-center
-    h1 Resumé
+    h1 Résumé
     ul.list-inline
       li
         h3 
@@ -15,6 +15,6 @@
       = offset_render 'resume/small_screen_apology'
   #resume.resume-container
     .text-center
-      object.resume-viewer type="application/pdf" data="images/ResumePDF2017copy.pdf"
+      object.resume-viewer type="application/pdf" data=resume_url
         p There was an issue rendering this PDF. You can try downloading it instead!
         = render 'download_buttons'
