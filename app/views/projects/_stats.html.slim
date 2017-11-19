@@ -11,9 +11,7 @@
 
   .col-sm-6
     .text-center
-      .btn.btn-small 
-        a href="#{project.html_url}" target="_blank" Git Repo
+      a.btn.btn-small href="#{project.html_url}" target="_blank" Git Repo
       - if project.homepage.present?
-        .btn.btn-small
-          a href="#{project.homepage}" target="_blank" Try It Out
+        a.btn.btn-small href="#{project.homepage}" target="_blank" Try It Out
     
