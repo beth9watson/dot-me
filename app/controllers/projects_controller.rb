@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
     @projects = projects
   end
 
+  def carshare_estimator
+    render 'projects/carshare/carshare_estimator'
+  end
+
   private
 
   def projects
