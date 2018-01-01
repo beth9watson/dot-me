@@ -1,17 +1,7 @@
-.row
-  .col-sm-offset-1.col-sm-5
-    strong> Last Activity:
-    = project.pushed_at.strftime("%m/%d/%Y")
-    p
-    ul.list-inline
-      - project.language_percentages.each do |lang, pct|
-        li 
-          strong> #{lang}: 
-          | #{pct}%
-
-  .col-sm-6
-    .text-center
-      a.btn.btn-small href="#{project.html_url}" target="_blank" Git Repo
-      - if project.homepage.present?
-        a.btn.btn-small href="#{project.homepage}" target="_blank" Try It Out
-    
+ul.list-inline
+  - project.language_percentages.each do |lang, pct|
+    li 
+      strong> #{lang}: 
+      | #{pct}%
+strong> Last Activity:
+= project.pushed_at.strftime("%m/%d/%Y")
