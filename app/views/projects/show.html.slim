@@ -12,6 +12,8 @@
           a href="#{ENV['BLOG_URL']}" target='_blank' Development Blog
 .landing-container class='basic-pallette'
   = offset_render 'racko', racko: @racko
+.landing-container class='medium-pallette'
+  = offset_render 'carshare', carshare: @carshare
 
 
 - content_for :javascript do
