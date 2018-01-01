@@ -1,4 +1,3 @@
-  .text-center
-    a.btn href="#{project.url}" View Repo
-    - if project.homepage
-      a.btn href="#{project.homepage}" View Project
+a.btn href="#{project.html_url}" View Repo
+- unless project.homepage.nil? || project.homepage.blank?
+  a.btn href="#{project.homepage}" View Project
