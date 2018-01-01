@@ -4,7 +4,7 @@ module ContactHelper
   end
 
   def download_racko_demo_mac
-    "<a href='images/ruby-racko-0.1.0-osx.tar.gz'} download> Download Demo for Mac </a>".html_safe
+    "<a href='images/ruby-racko-0.1.0-osx.tar.gz'} download>Download Demo for Mac </a>".html_safe
   end
 
   def github_url
