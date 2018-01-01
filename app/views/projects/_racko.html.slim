@@ -3,8 +3,8 @@ h2 #{racko.description}
   .col-sm-8
     .text-center
       = render 'buttons', project: racko
-      a.btn.btn-small href="#{racko.html_url}" target="_blank" Download for Windows
-      a.btn.btn-small href="#{racko.html_url}" target="_blank" Download for Mac
+      .btn 
+        = download_racko_demo_mac
   .col-sm-4  
     = render 'stats', project: racko
 = render 'description', project: racko
