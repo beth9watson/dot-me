@@ -1,9 +1,11 @@
-<audio src="<%= @source %>" id="troll"></audio>
+<audio id="troll"></audio>
 <script type="text/javascript">
-	document.getElementById("troll").volume = 0;
+  var audio = document.getElementById("troll");
+	audio.src = (Math.random() % 2 == 0) ? "/images/Trololo.mp3" : "/images/rick.mp3";
+	audio.volume = 0;
 	document.getElementById("troll").play();
   setTimeout(function(){
     document.getElementById("troll").volume = 1;
     console.log('your audio is started just now');
-  }, 4000);
+  }, 3000);
 </script>
