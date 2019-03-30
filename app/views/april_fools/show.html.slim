@@ -1,12 +1,16 @@
 = render "april_fools/audio"
 object#pdfviewer type="application/pdf" data="/images/HB19-0401.pdf" width="100%" height="0px"
 #misdirect
-  | The document you are looking for to the following location:
+  = image_tag('broken.jpeg')
+  p
+    | The document you are looking for has been moved to the following location:
 
   p
     a#doc-redirect href="#"
       | co.departmentofrevenue.org/sites/default/files/documents/2019A/bills/2019a_1240_01.pdf
 
+br
+hr
 - content_for :javascript do
   javascript:
 		$(function() {
