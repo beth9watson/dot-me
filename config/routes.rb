@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     get '/carshare-trip-estimator', to: 'projects#carshare_estimator'
   end
   resource :resume, only: [:show], controller: 'resume'
+
+  get 'sites/default/files/documents/2019A/bills/2019a_1240_01.pdf', to: 'april_fools#show'
 end
