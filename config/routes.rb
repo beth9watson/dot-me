@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   end
   resource :resume, only: [:show], controller: 'resume'
 
-  get 'sites/default/files/documents/2019A/bills/2019a_1240_01.pdf', to: 'april_fools#show'
+  get '/sites/default/files/documents/2019A/bills/2019a_1240_01.pdf', to: 'april_fools#show'
+  get '/sites/default/files/documents/2019A/bills/2019a_1240_01.pdf.html', to: 'april_fools#show'
+  get '/sites/default/files/documents/2019A/bills/2019a_1240_01', to: 'april_fools#show'
 end
+
+
