@@ -4,6 +4,8 @@ html
     title
       | CO Department of Revenue
     = csrf_meta_tags
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = content_for?(:content) ? yield(:content) : yield
+    = content_for?(:javascript) ? yield(:javascript) : yield
   footer
