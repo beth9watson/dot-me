@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby "~> 2.4.2"
+
 # include scribble store from repo
 gem 'scribble_store', git: 'https://github.com/bethanyvwatson/scribble-store-engine.git' 
 
