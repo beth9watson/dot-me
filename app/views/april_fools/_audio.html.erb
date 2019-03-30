@@ -1,9 +1,9 @@
-<audio src="<%= @source %>" id="troll">
-    <embed src="<%= @source %>" loop="true" hidden="true" autostart="true">
-</audio>
+<audio src="<%= @source %>" id="troll"></audio>
 <script type="text/javascript">
+	document.getElementById("troll").volume = 0;
+	document.getElementById("troll").play();
   setTimeout(function(){
-    document.getElementById("troll").play();
+    document.getElementById("troll").volume = 1;
     console.log('your audio is started just now');
   }, 4000);
 </script>
